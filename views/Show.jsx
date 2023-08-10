@@ -1,20 +1,23 @@
 import React from 'react';
 
-const myStyle = {
+const testStyle = {
     color: '#ffffff',
     backgroundColor: '#000000',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
 }
 
-export default function Index({ pokemon }) {
+export default function Index({ pokemon, index }) {
+let name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1)
+
     return (
-        <div>
-            <ul style={myStyle}>
-                {pokemon.map((item, index) => (
-                    <li key={index}>
-                        <a href={`/pokemon/${index}`}><button>{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</button></a>
-                    </li>
-                ))}
-            </ul>
+        <div style={testStyle}>
+            <h1>"Gotta Catch 'Em All"</h1>
+            <h2>{name}</h2>
+            <img src={`${pokemon.img}.jpg`} alt="picture of pokemon" />
+            <br />
+            <a href={`/pokemon`}><button>Pokemon List</button></a>
         </div>
     );
 }

@@ -3,6 +3,9 @@ import React from "react";
 const testStyle = {
     color: '#ffffff',
     backgroundColor: '#000000',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
 }
 
 export default function Index({ pokemon }) {
