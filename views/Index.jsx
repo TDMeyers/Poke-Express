@@ -10,10 +10,10 @@ export default function Index({ pokemon }) {
     return (
         <>
                 <ul style={myStyle}>
-                {pokemon.map((item) => {
+                {pokemon.map((item, index) => {
                 return (
                 <li>
-                    {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
+                    <a href={`/pokemon/${index}`}><button>{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</button></a>
                 </li>
                 )
                 })}
