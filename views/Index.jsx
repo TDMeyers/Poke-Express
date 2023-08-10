@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-const myStyle = {
+const testStyle = {
     color: '#ffffff',
     backgroundColor: '#000000',
 }
@@ -8,7 +8,7 @@ const myStyle = {
 export default function Index({ pokemon }) {
     return (
         <div>
-            <ul style={myStyle}>
+            <ul style={testStyle}>
                 {pokemon.map((item, index) => (
                     <li key={index}>
                         <a href={`/pokemon/${index}`}><button>{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</button></a>
@@ -17,4 +17,4 @@ export default function Index({ pokemon }) {
             </ul>
         </div>
     );
-}
+} 
